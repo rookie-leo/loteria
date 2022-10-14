@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+token:
+  loteria: ${TOKEN_LOTERIA}
+
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_loteria?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+api:
+  loteria:
+    resultado:
+      url: https://apiloterias.com.br/app/resultado
