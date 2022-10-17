@@ -1,6 +1,6 @@
-package br.com.loterias.caixa.http.controllers;
+package br.com.loterias.caixa.gateway.http.controllers;
 
-import br.com.loterias.caixa.http.model.DadosConsulta;
+import br.com.loterias.caixa.gateway.rest.clients.dataContract.ConsultaResultadoRequest;
 import br.com.loterias.caixa.service.LoteriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +20,7 @@ public class BuscaResultadoController {
     }
 
     @PostMapping
-    public ResponseEntity<?> searchResult(DadosConsulta request) {
+    public ResponseEntity<?> searchResult(ConsultaResultadoRequest request) {
         if (request != null) {
             loteriaService.searchResult(request);
         }

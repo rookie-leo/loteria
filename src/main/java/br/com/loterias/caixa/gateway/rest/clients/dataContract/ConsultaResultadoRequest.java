@@ -1,4 +1,4 @@
-package br.com.loterias.caixa.http.model;
+package br.com.loterias.caixa.gateway.rest.clients.dataContract;
 
 public class ConsultaResultadoRequest {
 
@@ -6,6 +6,7 @@ public class ConsultaResultadoRequest {
     private String numeroConcurso;
     private String token;
 
+    @Deprecated
     public ConsultaResultadoRequest() {
     }
 
